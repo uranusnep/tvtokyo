@@ -1,11 +1,11 @@
 $(function(){
     
     $(".slider").slick({
-        autoplay:true,
+        autoplay:false,
         dots:true,
         arrows:true,
         centerMode:true,
-        centerPadding:"15%",
+        centerPadding:"18.5%",
     });
     
 });

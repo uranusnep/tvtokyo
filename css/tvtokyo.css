@@ -14,10 +14,13 @@ li{
 .content-inner{
     background-color:#fff;
     display:flex;
+    align-items:center;
+    height:50px;
 }
 
 .header-logo{
     padding:0 20px;
+    cursor:pointer;
 }
 
 .genre{
@@ -42,26 +45,67 @@ li{
 
 .header-menu-wrap{
     display:flex;
+    width:100%;
+    height:50px;
 }
 
 .header-search{
     display:flex;
+    align-items:center;
+    font-size:15px;
     margin-left:auto;
-    margin-right:0;
+}
+
+.timetable{
+    text-decoration:none;
+    color:#244065;
+    padding:16px 30px;
 }
 
 .search{
     color:#fff;
     text-decoration:none;
+    padding:8px 12px;
 }
 
 .search-inner{
     background:linear-gradient(to right,#c7032d,#ff2449);
+    box-shadow:0 -2px 0 #98122d inset;
     padding:8px 24px 8px 12px;
     height:34px;
     border-radius:3px;
     align-items:center;
-    align-self:center;
+    box-sizing:border-box;
+}
+
+.header-global-menu{
+    padding:0 20px;
+    cursor:pointer;
+    border:0;
+    background:0 0;
+}
+
+.header-global-menu-inner{
+    position:relative;
+    width:20px;
+    height:16px;
+}
+
+.header-global-menu-inner span{
+    position:absolute;
+    left:0;
+    width:100%;
+    height:2px;
+    background-color:#333;
+    border-radius:2px;
+}
+
+.header-global-menu-inner span:nth-of-type(2){
+    top:7px;
+}
+
+.header-global-menu-inner span:nth-of-type(3){
+    top:14px;
 }
 
 .slider{
@@ -90,7 +134,7 @@ li{
     position:absolute;
     top:0;
     left:0;
-    width:1064px;
+    width:960px;
     height:800px;
     background-color:rgba(0,0,0,0.6);
 }
@@ -131,6 +175,10 @@ li{
     bottom:250px;
     cursor:pointer;
     color:#000;
+}
+
+.slick-dots li button:hover{
+    color:#fff;
 }
 
 .slick-dots li .slick-active{
