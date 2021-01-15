@@ -25,18 +25,20 @@ li{
 
 .genre{
     background-color:#444;
-    padding:15px 0;
 }
 
 .genre-list{
     display:flex;
     list-style:none;
+    margin:0;
+    padding:15px 0;
 }
 
 .genre-item{
     color:#fff;
     text-decoration:none;
     padding:15px 25px;
+    font-size:13px;
 }
 
 .genre-item:hover{
@@ -108,20 +110,18 @@ li{
     top:14px;
 }
 
-.slider{
-    width:100%;
-    margin:0 auto;
+.global-navigation{
+    display:none;
 }
 
-.slider .slider-prev::before{
-    position:absolute;
-    top:50%;
-    left:60px;
-    z-index:998;
+.items{
+    width:960px;
+    max-width:960px;
+    position:relative;
 }
 
 .slider .items .media{
-    position:relative;
+    display:block;
 }
 
 .slider .items .media img{
@@ -135,7 +135,7 @@ li{
     top:0;
     left:0;
     width:960px;
-    height:800px;
+    height:760px;
     background-color:rgba(0,0,0,0.6);
 }
 
@@ -171,9 +171,7 @@ li{
 }
 
 .slick-dots li{
-    position:absolute;
     bottom:250px;
-    cursor:pointer;
     color:#000;
 }
 
@@ -184,3 +182,380 @@ li{
 .slick-dots li .slick-active{
     background-color:#fff;
 }
+
+.slick-prev{
+    left:60px;
+    top:30%;
+    z-index:2;
+    width:40px;
+    height:40px;
+    margin:10px;
+    border-bottom:2px solid #fff;
+    border-left:2px solid #fff;
+    transform:rotate(45deg);
+    opacity:.5;
+}
+
+.slick-prev:hover{
+    opacity:1;
+}
+
+.slick-prev::before{
+    content:"";
+}
+
+.slick-next{
+    right:60px;
+    top:30%;
+    width:40px;
+    height:40px;
+    margin:10px;
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    transform:rotate(45deg);
+    opacity:.5;
+}
+
+.slick-next:hover{
+    opacity:1;
+}
+
+.slick-next::before{
+    content:"";
+}
+
+.channel{
+    color:#fff;
+}
+
+.today-channel{
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+.today-onair{
+    text-align:center;
+    border:1px solid #fff;
+    padding:15px 10px;
+    width:300px;
+    margin:0 auto;
+    border-radius:50px;
+}
+
+.today-onair:hover{
+    opacity:.6;
+}
+
+.today-onair-button{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    display:inline-block;
+}
+
+.video-service{
+    padding:0 115px;
+    margin:40px 0;
+}
+
+.video-service .slick-prev{
+    width:20px;
+    height:20px;
+    border-bottom:2px solid #fff;
+    border-left:2px solid #fff;
+    position:absolute;
+    left:-20px;
+    top:25%;
+    display:none;
+}
+
+.video-service .slick-next{
+    width:20px;
+    height:20px;
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    position:absolute;
+    top:25%;
+    right:-30px;
+}
+
+.service-title{
+    color:#fff;
+    text-align:center;
+    font-size:24px;
+    margin-bottom:40px;
+}
+
+.service-slider{
+    margin-left:-15px;
+}
+
+.service-list{
+    width:264px;
+    padding:0 15px;
+    box-sizing:border-box;
+}
+
+.service-list:hover{
+    opacity:.6;
+}
+
+.service-list img{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.service-list:first-child{
+    margin-left:-15px;
+}
+
+.service-list-title{
+    color:#fff;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.recommend{
+    color:#fff;
+}
+
+.program-channel-under-box{
+    margin:0 100px 40px;
+}
+
+.middle-program-box{
+    width:100%;
+    display:flex;
+}
+
+.recommend-list-item{
+    padding:0 15px;
+    width:300px;
+}
+
+.recommend-list-item:hover{
+    opacity:.6;
+}
+
+.program-image{
+    margin-bottom:10px;
+    width:299.8px;
+    height:168px;
+}
+
+.program-image img{
+    width:100%;
+    height:100%;
+}
+
+.missed-show{
+    color:#fff;
+}
+
+.missed-show .slick-prev{
+    width:20px;
+    height:20px;
+    left:110px;
+}
+
+.missed-show .slick-next{
+    width:20px;
+    height:20px;
+    right:110px;
+}
+
+.missed-show .slick-slider::before{
+    content:'';
+    width:100px;
+    height:100%;
+    background-color:rgba(0,0,0,.7);
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:3;
+}
+
+.missed-show .slick-slider::after{
+    content:'';
+    width:100px;
+    height:100%;
+    background-color:rgba(0,0,0,.7);
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:3;
+}
+
+.recommend-slider{
+    position:relative;
+    margin:0 -15px 40px;
+    display:flex;
+}
+
+.recommend-slider .slick-cloned:nth-og-type(2){
+    position:absolute;
+    top:0;
+    left:115px;
+}
+
+.show-box{
+    padding:0 15px;
+    width:300px;
+}
+
+.show-box:hover{
+    opacity:.6;
+}
+
+.show-image{
+    margin-bottom:10px;
+}
+
+
+
+
+
+.program-box{
+    color:#fff;
+    padding:0 115px;
+    display:flex;
+    margin:0 0 40px;
+}
+
+.program-box-title{
+    display:flex;
+}
+
+.program-channel-split{
+    display:flex;
+    width:100%;
+    margin-left:15px;
+}
+
+.special-program{
+    margin-right:30px;
+    width:calc(33% - 15px);
+}
+
+.special-program:hover{
+    opacity:.6;
+}
+
+.other-program-heading{
+    font-size:18px;
+}
+
+.special-program-box img{
+    width:100%;
+}
+
+.program-channel-list:nth-of-type(1){
+    margin-right:30px;
+}
+
+.program-channel-list:nth-of-type(1){
+    margin-left:-15px;
+}
+
+.program-channel-list:hover{
+    opacity:.6;
+}
+
+.program-channel-list img{
+    width:100%;
+}
+
+.program-channel-box{
+    display:flex;
+    margin-bottom:5px;
+    align-items:center;
+}
+
+.program-channel{
+    background-color:#444;
+    font-size:12px;
+    margin-right:10px;
+    padding:2px 5px;
+}
+
+.program-date{
+    font-size:13px;
+    color:#d8d8d8;
+}
+
+.program-discription{
+    font-size:14px;
+}
+
+.rerun{
+    width:66%;
+}
+
+.recommend-anime{
+    color:#fff;
+}
+
+.recommend-anime .slick-slider::before{
+    content:'';
+    width:100px;
+    height:100%;
+    background-color:rgba(0,0,0,.7);
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:3;
+}
+
+.recommend-anime .slick-slider::after{
+    content:'';
+    width:100px;
+    height:100%;
+    background-color:rgba(0,0,0,.7);
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:3;
+}
+
+.recommend-anime .slick-prev{
+    width:20px;
+    height:20px;
+    left:110px;
+}
+
+.recommend-anime .slick-next{
+    width:20px;
+    height:20px;
+    right:110px;
+}
+
+.recommend-title{
+    font-size:18px;
+    padding:0 115px;
+}
+
+.anime-box{
+    width:300px;
+    padding:0 15px;
+}
+
+.anime-box:hover{
+    opacity:.6;
+}
+
+.anime-image{
+    margin-bottom:10px;
+}
+
+.anime-image img{
+    height:168.9px;
+}
+
