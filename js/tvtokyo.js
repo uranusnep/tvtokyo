@@ -19,10 +19,7 @@ $(function(){
         slidesToScroll: 5,
         infinite:false,
     });
-    
-    
-    
-    
+      
    $('.recommend-slider').slick({
         slidesToShow:4,
         slidesToScroll:4,
