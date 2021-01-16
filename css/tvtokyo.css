@@ -393,9 +393,8 @@ li{
 }
 
 .recommend-slider{
-    position:relative;
-    margin:0 -15px 40px;
-    display:flex;
+    margin: 0;
+    padding: 0;
 }
 
 .recommend-slider .slick-cloned:nth-og-type(2){
@@ -406,7 +405,6 @@ li{
 
 .show-box{
     padding:0 15px;
-    width:300px;
 }
 
 .show-box:hover{

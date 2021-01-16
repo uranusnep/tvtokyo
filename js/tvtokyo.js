@@ -25,11 +25,11 @@ $(function(){
     
    $('.recommend-slider').slick({
         slidesToShow:4,
-        slidesToScroll:4,
-     //   infinite:true,
         centerMode:true,
         centerPadding:"115px",
     });
+    //@see https://qiita.com/Sotq_17/items/0811311d88e1823fe0a8
+    $('.recommend-slider').slick("slickSetOption", "slidesToScroll", 4, true);
       
         
     
