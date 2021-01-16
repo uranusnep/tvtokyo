@@ -15,9 +15,8 @@ $(function(){
 //    });
     
     $(".service-slider").slick({
-        slidesToShow: 6,
-        slidesToScroll: 4,
-        variableWidth: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
         infinite:false,
     });
     
@@ -25,11 +24,11 @@ $(function(){
     
     
    $('.recommend-slider').slick({
+        slidesToShow:4,
+        slidesToScroll:4,
+     //   infinite:true,
         centerMode:true,
         centerPadding:"115px",
-        variableWidth:true,
-        slideToShow:6,
-        slidesToScroll:4,
     });
       
         
