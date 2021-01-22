@@ -1,7 +1,7 @@
 $(function(){
     
     $(".slider").slick({
-        autoplay:false,
+        autoplay:true,
         autoplaySpeed:5000,
         dots:true,
         arrows:true,
@@ -10,9 +10,10 @@ $(function(){
         variableWidth:true,
     });
     
-   // $(".channel-slider").slick({
-        //autoplay:true,
-//    });
+    $(".channel-slider").slick({
+        centerMode:true,
+        centerPadding:'25%'
+    });
     
     $(".service-slider").slick({
         slidesToShow: 5,
