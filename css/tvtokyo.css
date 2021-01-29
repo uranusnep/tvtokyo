@@ -1,6 +1,8 @@
+
 body{
     background-color:#000;
     margin:0;
+    font-size:12px;
 }
 
 ul{
@@ -17,6 +19,10 @@ a{
     text-decoration:none;
     color:#fff;
     transition:all .3s;
+}
+
+.wrapper{
+    overflow:hidden;
 }
 
 .content-inner{
@@ -39,14 +45,19 @@ a{
     display:flex;
     list-style:none;
     margin:0;
-    padding:15px 0;
+    overflow-x:auto;
 }
 
 .genre-item{
+    white-space:nowrap;
+}
+
+.genre-item-link{
     color:#fff;
     text-decoration:none;
     padding:15px 25px;
     font-size:13px;
+    display:block;
 }
 
 .genre-item:hover{
@@ -70,6 +81,18 @@ a{
     text-decoration:none;
     color:#244065;
     padding:16px 30px;
+    display:flex;
+    align-items:center;
+}
+
+.timetable::before{
+    display:inline-block;
+    content:'';
+    width:17px;
+    height:17px;
+    margin:0 5px 0 0;
+    background:url('https://www.tv-tokyo.co.jp/tbcms/assets/images/icon_timetable.svg');
+    background-size:contain;
 }
 
 .search{
@@ -86,6 +109,17 @@ a{
     border-radius:3px;
     align-items:center;
     box-sizing:border-box;
+    display:flex;
+}
+
+.search-inner::before{
+    content:'';
+    width:15px;
+    height:18px;
+    margin:0 8px 0 0;
+    display:inline-block;
+    background:url('https://www.tv-tokyo.co.jp/tbcms/assets/images/icon_search_w.svg') no-repeat;
+    background-size:contain;
 }
 
 .header-global-menu{
@@ -284,6 +318,13 @@ a{
 
 .channel-onair-box{
     padding-top:50px;
+    opacity:.5;
+    position:relative;
+}
+
+.channel-onair-box.slick-active{
+    opacity:1;
+    z-index:2;
 }
 
 .channel-slider .slick-slide img{
@@ -323,18 +364,9 @@ a{
     color:#9b9b9b;
 }
 
-
-
-
-
-
-
-
-
-
 .today-onair{
     text-align:center;
-    border:1px solid #fff;
+    border:1px solid rgba(255,255,255,0.6);
     padding:15px 10px;
     width:300px;
     margin:0 auto;
@@ -419,6 +451,10 @@ a{
 
 .program-under-box{
     margin:0 100px 40px;
+}
+
+.program-channel-under-box{
+    padding:0 100px;
 }
 
 .middle-program-box{
@@ -796,9 +832,8 @@ a{
 
 .update-meta{
     display:flex;
-    width:340px;
-    margin-right:10px;
     align-items:center;
+    width:340px;
 }
 
 .update-date{
@@ -1027,6 +1062,11 @@ a{
 .small-update-link{
     min-height:90.625px;
     position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   
 }
 
 .small-update-link .update-image{
@@ -1034,3 +1074,434 @@ a{
     top:20px;
     right:0;
 }
+
+.small-update-link .update-text{
+    width:auto;
+}
+
+.footer-container-wrap{
+    background-color:#000;
+    padding:80px 0 0;
+    width:calc(100% - 230px);
+    margin:0 auto;
+}
+
+.banner{
+    margin-bottom:70px;
+}
+
+.banner-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.banner-item{
+    margin:10px;
+}
+
+.banner-slider{
+    margin-bottom:50px;
+    min-width:769px;
+}
+
+.banner-slider .slick-slide{
+    padding:5px;
+    
+}
+
+.banner-slider .slick-slide img{
+    display:inline-block;
+}
+
+.banner-slider-item{
+    width:323px;
+    padding:5px;
+}
+
+
+
+.sns-heading{
+    color:#fff;
+    font-size:14px;
+    width:154px;
+    font-weight:400;
+}
+
+.sns-link-inner{
+    display:flex;
+    padding:20px 0;
+    border-top:1px solid #444;
+    border-bottom:1px solid #444;
+    align-items:center;
+}
+
+.sns-link-wrap{
+    display:flex;
+    width:100%;
+}
+
+.sns-link-channel-wrap{
+    display:flex;
+    margin:10px 2%;
+    width:auto;
+    align-items:center;
+}
+
+.sns-link-channel-heading{
+    color:gray;
+    font-size:12px;
+    margin:0 20px 0 0;
+    width:60px;
+}
+
+.sns-link-list{
+    display:flex;
+}
+
+.sns-link-item{
+    margin:0 20px;
+}
+
+.sns-link-button{
+    display:block;
+    width:48px;
+    height:48px;
+}
+
+.media-link-inner{
+    padding:40px 0 25px;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid #444;
+}
+
+.media-link-heading{
+    color:#fff;
+    margin:0 0 16px;
+    font-size:14px;
+    font-weight:400;
+    width:154px;
+}
+
+.media-link-wrap{
+    display:flex;
+}
+
+.media-link-list{
+    display:flex;
+}
+
+.media-link-item{
+    margin-right:12px;
+    margin-bottom:15px;
+}
+
+.footer-main-navigation-list{
+    margin-bottom:60px;
+    padding:60px 0 35px;
+    border-bottom:1px solid #444;
+}
+
+.footer-main-navigation-item{
+    display:flex;
+}
+
+.footer-main-navigation-item-title{
+    color:#808080;
+    min-width:160px;
+    font-size:12px;
+}
+
+.footer-main-navigation-item-inner{
+    color:#fff;
+    display:flex;
+    font-size:12px;
+    flex-wrap:wrap;
+}
+
+.footer-main-navigation-category-item{
+    margin-right:15px;
+    margin-bottom:25px;
+    padding:0 15px 0 0;
+    border-right:1px solid #444;
+}
+
+.button-group{
+    margin:30px 0;
+    display:flex;
+    justify-content:center;
+}
+
+.page-to-top{
+    width:60px;
+    height:60px;
+    border:1px solid #9b9b9b;
+    border-radius:60px;
+    background:0 0;
+    transition:all .3s;
+}
+
+.page-to-top:hover{
+    background-color:#444;
+}
+
+.page-to-top::before{
+    content:'';
+    width:21px;
+    height:13px;
+    background-image:url("https://www.tv-tokyo.co.jp/tbcms/assets/images/_style_sprites@2x.png");
+    display:inline-block;
+    background-position:-84px 0;
+    background-size:105px 104px;
+}
+
+.footer-attention{
+    margin-bottom:30px;
+    color:#808080;
+}
+
+small{
+    font-size:80%;
+}
+
+.footer-copyright{
+    color:#808080;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.footer-copyright p{
+    margin:0 5px;
+    display:inline-block;
+}
+
+@media screen and (min-width:320px){
+    .header-logo img{
+        width:100%;
+    }
+    
+    .items{
+        width:270px;
+    }
+    
+    .timetable{
+        display:block;
+        white-space:nowrap;
+        padding:10px 12px;
+        font-size:10px;
+    }
+    
+    .timetable::before{
+        display:block;
+        margin:0 auto 5px;
+    }
+    
+    .search{
+        font-size:10px;
+        white-space:nowrap;
+        padding:8px 0;
+    }
+    
+    .header-global-menu{
+        padding:0 20px;
+    }
+    
+    .genre-item-link{
+        padding:14px 15px 12px;
+    }
+    
+    .slider .slick-prev, .slick-next{
+        width:20px;
+        height:20px;
+        top:20%;
+    }
+    
+    .slider .slick-prev{
+        left:-5px;
+    }
+    
+    .slider .slick-next{
+        right:-5px;
+    }
+    
+    .slider .slick-dots li button::before{
+        opacity:.75;
+    }
+    
+    .hero-slider-discription{
+        height:90px;
+        padding:20px 0;
+    }
+    
+    .hero-slider-title{
+        font-size:18px;
+    }
+    
+    .hero-slider-information-image{
+        height:20px;
+    }
+    
+    .hero-slider-information-text{
+        font-size:12px;
+    }
+    
+    .channel{
+        margin:0 0 40px;
+    }
+    
+    .today-channel{
+        font-size:16px;
+    }
+    
+    .channel-tab{
+        margin:0 12.5px 30px;
+    }
+    
+    .channel-tab-item{
+        font-size:13px;
+        margin:0 7.5px;
+    }
+    
+    
+    
+}
+
+@media screen and (min-width:375px){
+    .heading-logo{
+        padding:0 15px;
+    }
+    
+    .items{
+        width:326px;
+    }
+    
+}
+
+@media screen and (min-width:425px){
+    .heading-logo{
+        padding:0 15px;
+    }
+    
+    .timetable{
+        padding:10px 12px;
+        font-size:10px;
+        display:block;
+        white-space:nowrap;
+    }
+    
+    .timetable::before{
+        display:block;
+        margin:0 auto 5px;
+    }
+    
+    .search{
+        font-size:10px;
+        white-space:nowrap;
+        padding:8px 0;
+    }
+    
+    .header-global-menu{
+        padding:0 20px;
+    }
+    
+    .genre-item-link{
+        padding:14px 15px 12px;
+    }
+    
+    .slider{
+        width:100%;
+    }
+    
+    .items{
+        width:376px;
+    }
+    
+    .slider .slick-prev, .slick-next{
+        width:20px;
+        height:20px;
+        top:20%;
+    }
+    
+    .slider .slick-prev{
+        left:-5px;
+    }
+    
+    .slider .slick-next{
+        right:-5px;
+    }
+    
+    .slider .slick-dots li button::before{
+        opacity:.75;
+    }
+    
+    .hero-slider-discription{
+        height:90px;
+        padding:20px 0;
+    }
+    
+    .hero-slider-title{
+        font-size:18px;
+    }
+    
+    .hero-slider-information-image{
+        height:20px;
+    }
+    
+    .hero-slider-information-text{
+        font-size:12px;
+    }
+    
+    .channel{
+        margin:0 0 40px;
+    }
+    
+    .today-channel{
+        font-size:16px;
+    }
+    
+    .channel-tab{
+        margin:0 12.5px 30px;
+    }
+    
+    .channel-tab-item{
+        font-size:13px;
+        margin:0 7.5px;
+    }
+    
+}
+
+@media screen and (min-width:768px){
+    .items{
+        width:718px;
+    }
+
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .timetable{
+        font-size:15px;
+        display:flex;
+        align-items:center;
+    }
+    
+    .timetable::before{
+        display:inline-block;
+        margin:0 8px 0 0;
+    }
+    
+    .search{
+        font-size:15px;
+    }
+    
+    .items{
+        width:960px;
+    }
+    
+}
+
+
+
+

@@ -28,7 +28,18 @@ $(function(){
     });
     //@see https://qiita.com/Sotq_17/items/0811311d88e1823fe0a8
     $('.recommend-slider').slick("slickSetOption", "slidesToScroll", 4, true);
-      
-        
+    
+    $('.banner-slider').slick({
+        slideToShow:4,
+        dots:true,
+        arrows:false,
+    }); 
+    
+    $('.banner-slider').slick("slickSetOption", "slidesToScroll", 4, true);
+    
+    $('.page-to-top').click(function(){
+        $('html, body').animate({scrollTop:0},'slow');
+    });
+    
     
 });
